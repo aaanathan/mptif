@@ -40,9 +40,9 @@
 ##### go build mptif.go (This command will generate mptif executable file)
 
 #### Run exe 
-##### mptif.exe
+##### > mptif.exe
 
-##### Use your browser to : http://localhost:8085
+##### Use your browser to access : http://localhost:8085
 
 ### Prerequisites
 
