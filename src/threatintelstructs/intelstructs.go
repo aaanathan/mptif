@@ -1920,6 +1920,7 @@ type IBMxForceMalware struct {
 }
 
 type APIs struct {
+	AppPort       string
 	Safebrowse    string
 	CymonUser     string
 	CymonPassword string
