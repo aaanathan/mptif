@@ -1,0 +1,66 @@
+#vtcollapse{
+            overflow-y:auto;
+            height:400px;
+          }
+#GoogleSafeBrowsecollapse{
+                      overflow-y:scroll;
+                      height:100px;
+                    }
+#vtadditionalfileinfocollapse{
+                                          overflow-y:scroll;
+                                          height:300px;
+                                        }
+                                        #commonadditionalfileinfocollapse{
+                                                                                  overflow-y:scroll;
+                                                                                  height:400px;
+                                                                                }
+                                        #Urlquerynetcollapse {
+                                          overflow-y:auto;
+                                          height:200px;
+                                        }
+                                        #AvCaesorcollapse {
+                                          overflow-y:auto;
+                                          height:200px;
+                                        }
+                                        #vtjotticollapse {
+                                          overflow-y:auto;
+                                          height:200px;
+                                        }
+                                        #Metadefendercollapse {
+                                          overflow-y:auto;
+                                          height:200px;
+                                        }
+                                        #Cymonrcollapse {
+                                          overflow-y:auto;
+                                          height:500px;
+                                        }
+                                        #shadowservercollapse {
+                                          overflow-y:auto;
+                                          height:150px;
+                                        }
+
+    .gtext {
+              color: red;
+              text-shadow: 0px 1px 0px red;
+              font-size: 90%;
+            }
+            .gtextblk {
+                      color: black;
+                      text-shadow: 0px 1px 0px black;
+                      font-size: 90%;
+                    }
+    .gtext2 {
+                      color: blue;
+                      text-shadow: 0px 1px 0px blue;
+                      font-size: 90%;
+                    }
+                    .gtext3 {
+                                      color: black;
+                                      text-shadow: 0px 1px 0px black;
+                                      font-size: 85%;
+                                    }
+                                    .gtext4 {
+                                                      color: black;
+                                                      text-shadow: 0px 1px 0px black;
+                                                      font-size: 110%;
+                                                    }
