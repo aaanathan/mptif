@@ -10,7 +10,6 @@ import (
 	"regexp"
 	"strings"
 	"text/template"
-	"time"
 
 	"./avcaesar"
 	"./cymonio"
@@ -241,9 +240,8 @@ func index(httpwr http.ResponseWriter, req *http.Request) {
 
 				go jotti.Jottiscanprocess(file, filename, finflag, apikeys.Jotti, scanResultStructForTemplate.Jottiscanres)
 				go avcaesar.Uploadfiletoavcaesar(filename, finflag, scanResultStructForTemplate.AvCaesorAVFileInfoResult, scanResultStructForTemplate.AvCaesorAVEngineResult)
-				//go metadefenderfilescan(filename, finflag)
 				go metadefender.Metadefenderfilescan(filename, finflag, apikeys.Metadefender, scanResultStructForTemplate.MetaScanres)
-				time.Sleep(6000 * time.Millisecond)
+				//time.Sleep(6000 * time.Millisecond)
 				<-finflag
 				<-finflag
 				<-finflag

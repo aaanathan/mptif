@@ -11,6 +11,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"time"
 
 	"../threatintelstructs"
 )
@@ -47,17 +48,19 @@ func Metadefenderfilescan(filename string, finflag chan string, apikey string, M
 	scanreq.Header.Add("Content-Type", bodywriter.FormDataContentType())
 
 	client := &http.Client{}
-	//fmt.Println("Uploading .........")
+	//fmt.Println("Uploading .........metadefender")
 	resp, uploaderr := client.Do(scanreq)
 	if uploaderr != nil {
 		fmt.Println(uploaderr)
 	}
-	//fmt.Println(" .........Done!")
+	//fmt.Println("metadefender .........Done!")
 	defer resp.Body.Close()
 
 	respBodyBytes, _ := ioutil.ReadAll(resp.Body)
 	//fmt.Println(string(respBodyBytes))
 	_ = json.Unmarshal(respBodyBytes, &metascanDataID)
+	//fmt.Println(metascanDataID.DataID)
+	time.Sleep(6000 * time.Millisecond)
 	fillScanResult(metascanDataID.DataID, apikey, MetaScanres)
 	finflag <- "finishedmetadef"
 
