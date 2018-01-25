@@ -66,7 +66,7 @@ type ScanResults struct {
 var scanResultStructForTemplate ScanResults
 
 func init() {
-	mmsatpl = template.Must(template.ParseFiles("./templates/SandboxDisplay.html"))
+	mmsatpl = template.Must(template.ParseFiles("./templates/mptif.html"))
 	apikeys = threatintelstructs.APIs{}
 	scanResultStructForTemplate = ScanResults{}
 	scanResultStructForTemplate.Jottiscanres = make(map[string]string)
@@ -259,5 +259,9 @@ func index(httpwr http.ResponseWriter, req *http.Request) {
 func main() {
 	fillapikeys()
 	http.HandleFunc("/", index)
+	/*http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("templates/css"))))
+	http.Handle("/fonts/", http.StripPrefix("/fonts/", http.FileServer(http.Dir("templates/fonts"))))
+	http.Handle("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("templates/js"))))
+	http.Handle("/vendor/", http.StripPrefix("/vendor/", http.FileServer(http.Dir("templates/vendor"))))*/
 	http.ListenAndServe(":"+apikeys.AppPort, nil)
 }
